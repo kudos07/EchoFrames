@@ -1,0 +1,37 @@
+import pyttsx3
+import wave
+
+# Meeting transcript (around 3 minutes of normal speech)
+meeting_text = """
+Good morning everyone. Let's get started. The first item on our agenda today is the Q2 sales performance.
+Sarah, can you give us an overview?
+Yes, absolutely. Compared to Q1, we’ve seen an increase of 12% in total revenue, largely driven by our new product launch.
+However, customer retention dipped slightly, which we need to address.
+Thanks Sarah. James, what are your thoughts on improving retention?
+I think we should focus more on post-purchase engagement and personalized follow-ups. 
+Also, our customer service response time needs improvement.
+That makes sense. Can we have a proposal ready for the next meeting?
+Yes, I can prepare that.
+Great. The next item is the upcoming marketing campaign. Lisa, can you update us?
+Sure. The campaign will run for six weeks starting next month. Our main channels will be social media and email newsletters.
+We’ll also experiment with targeted ads.
+Sounds good. Make sure to coordinate with the sales team so messaging is aligned.
+Will do. Lastly, let’s talk about the product roadmap. 
+We are slightly behind on the next software release due to testing delays.
+How long is the delay?
+About two weeks. We’re working to catch up without compromising quality.
+Understood. Please provide weekly updates until release.
+No problem.
+Alright, if there’s nothing else, we’ll wrap up here. Thanks everyone.
+"""
+
+engine = pyttsx3.init()
+engine.setProperty('rate', 150)  
+engine.setProperty('volume', 1.0)
+
+
+output_wav = "meeting_conversation.wav"
+engine.save_to_file(meeting_text, output_wav)
+engine.runAndWait()
+
+output_wav
