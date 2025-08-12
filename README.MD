@@ -53,8 +53,8 @@ An end-to-end web application that:
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/meeting-storyboard.git
-cd meeting-storyboard
+git clone https://github.com/kudos07/EchoFrames.git
+cd EchoFrames
 
 # -------------------
 # Backend Setup
